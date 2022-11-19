@@ -3,6 +3,9 @@ include "./header.html";
 include "./questionbank.php";
 ?>
 <body>
+<div class="date">
+    <?php echo "Today is " . date('l, F j, Y'); ?>
+</div>
 <div class="block">
     <?php echo '"' . $quote . '"'; ?>
 </div>
@@ -22,7 +25,8 @@ include "./questionbank.php";
             echo '<input type="text" class="goal-text" name="goalQuestion' . $numGoals . '">';
         }
         ?>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="form-button">
+        <input type="reset" value="Reset" class="form-button">
     </form>
 </div>
 </body>
