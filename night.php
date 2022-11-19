@@ -24,8 +24,12 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
                 <input type="text" class="goal-text">
                 <input type="checkbox" class="goal-checkbox">
             </div>
+<<<<<<< HEAD
         <?php endforeach; ?>
         <label for="journal" class="form-label">Journal entry for today:</label>
         <input type="textarea" class="journal-entry" name="journal">
         </div>
+=======
+    </div>
+>>>>>>> 94a032d3fa75f217aa3d5a6be69f21aa0801770e
 </body>
