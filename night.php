@@ -17,11 +17,15 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
                 <input type="range" min="1" max="10" value="5" class="slider">
             </div>
         <?php endforeach; ?>
-        <p class="goal-question">Reflect on your mental health goals for today:</p>
+        <p class="goal-question">Reflect on your mental health goals for today. Do you feel that you were successful in it?</p>
         <?php foreach($goalResponses as $goal): ?>
             <div class="response-container">
                 <p class="goal-response-text"><?php echo $goal; ?></p>
                 <input type="text" class="goal-text">
+                <input type="checkbox" class="goal-checkbox">
             </div>
+        <?php endforeach; ?>
+        <label for="journal" class="form-label">Journal entry for today:</label>
+        <input type="textarea" class="journal-entry" name="journal">
         </div>
 </body>
