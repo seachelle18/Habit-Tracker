@@ -17,13 +17,13 @@ $goals = [];
                 <input type="range" min="1" max="10" value="5" class="slider">
             </div>
         <?php endforeach; ?>
-    <p class="goal-question">What are your mental health goals for today?</p>
-    <?php
-    $numGoals = 0;
-    while ($numGoals < 3) {
-        echo '<input type="text" class="goal-text" name="question' . $numGoals . '">';
-        $numGoals++;
-    }
-    ?>
+        <p class="goal-question">What are your mental health goals for today?</p>
+        <?php
+        for ($numGoals = 0; $numGoals < 3; $numGoals++) {
+            echo '<input type="text" class="goal-text" name="goalQuestion' . $numGoals . '">';
+        }
+        ?>
+        <input type="submit" value="Submit">
+    </form>
 </div>
 </body>
