@@ -73,11 +73,22 @@ input, label {
 
 input[type="range"] {
     -webkit-appearance: none;
+    appearance: none;
     background: transparent;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
     background: lightblue;
-    height: 0.5rem;
+    height: 10px;
     border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -2px;
+    background-color: salmon;
+    height: 14px;
+    width: 12px;
+    border-radius: 6px;
 }
