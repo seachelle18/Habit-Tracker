@@ -23,5 +23,5 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
                 <p class="goal-response-text"><?php echo $goal; ?></p>
                 <input type="text" class="goal-text">
             </div>
-        </div>
+    </div>
 </body>
