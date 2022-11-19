@@ -11,6 +11,12 @@
 <body>
     <?php include "header.html" ?>
     <div class="login-box">
-        
+        <form class="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Pasword</label>
+            <input type="password" id="password" name="password">
+        </form>
+
     </div>
 </body>
