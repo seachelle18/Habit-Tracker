@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Habit Tracker</title>
-    <link rel="stylesheet" type="text/css" href="inc/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="habit tracker, mental health">
-    <meta name="description" content="Habit Tracker">
-    <meta name="author" content="Michelle Chow">
-</head>
+<?php
+session_start();
+
+?>
+
+
+<?php include "header.html" ?>
 <body>
-    <?php include "header.html" ?>
     <div class="login-box">
-        <form class="login-form">
-            <label for="username">Username:</label>
+        <form class="login-form" method="POST">
+            <label for="username" class="form-label">Username:</label>
             <input type="text" id="username" name="username">
-            <label for="password">Pasword</label>
+            <label for="password" class="form-label">Password:</label>
             <input type="password" id="password" name="password">
+            <input type="submit" value="Submit">
         </form>
 
     </div>
