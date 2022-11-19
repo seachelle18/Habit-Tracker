@@ -1,0 +1,52 @@
+.navbar {
+    height: 50px;
+    border-bottom: 2px solid lightblue;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: grey;
+    background:linear-gradient(180deg, transparent 60%, lightblue 60%);
+}
+
+form {
+    height: 50vh;
+    width: 30vw;
+    border: 2px solid black;
+    border-radius: 8%;
+    margin: 20px auto;
+    align-content: center;
+}
+
+form * {
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+input {
+    padding: 10px;
+}
+
+input, label {
+    border-radius: 20px;
+    width: 50%;
+    max-width: none;
+}
