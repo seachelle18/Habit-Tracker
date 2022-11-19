@@ -1,1 +1,4 @@
-<?php include "./header.html" ?>
+<?php 
+include "./header.html";
+include "./questionbank.php";
+?>

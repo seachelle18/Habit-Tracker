@@ -1,7 +1,6 @@
 <?php 
 include "./header.html";
 include "./questionbank.php";
-$goals = [];
 ?>
 <body>
 <div class="block">
