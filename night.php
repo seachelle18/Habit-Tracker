@@ -63,8 +63,8 @@ if (isset($_POST['submit'])) {
             <div class="response-container">
                 <p class="goal-response-text"><?php echo $goal; ?></p>
                 <div class="response-check">
-                <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses)?>>
-                    <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses)?>>
+                <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses[0])?>>
+                    <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses[0])?>>
                 </div>
             </div>
         <?php endforeach; ?>
