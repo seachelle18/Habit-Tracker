@@ -1,17 +1,16 @@
 <?php include "./header.php";
 
 //Configure PDO
-$pdo = new PDO ('sqlite:C:\Users\michellec\xampp\htdocs\habit-tracker\Habit-Tracker\goal (2).db');
-$retrieve 
+$pdo = new PDO ('sqlite:goal (2).db');
+$retrievedEntry = []; 
 
 if (isset($_POST['submit'])) {
     $date = $_POST['journalDate'];
     $sql = 'SELECT * FROM goals WHERE date = ?';
     $statement = $pdo->prepare($sql);
     $statement->execute($date);
-
-
-};
+    $retrievedEntry = $statement->fetchAll();
+}
 ?>
 
 <body>
@@ -22,4 +21,10 @@ if (isset($_POST['submit'])) {
             <input type="submit" name="submit" value="Submit">
         </form>
     </div>
+    <?php if (count($retrievedEntry) == 1): ?>
+        <div class="block">
+            <!-- some stuff -->
+        </div>
+    <?php endif ?>
+
 </body>
