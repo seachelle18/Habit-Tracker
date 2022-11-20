@@ -37,6 +37,9 @@ $r1;
 $r2;
 $r3;
 
+// Journal entry
+$jEntry;
+
 // Initializing above variables
 if (count($retrievedEntry)>=1) {
     $q1 = $retrievedEntry[0]['question0'];
@@ -55,7 +58,7 @@ if (count($retrievedEntry)>=1) {
     $r2 = $retrievedEntry[0]['reflection1'];
     $r3 = $retrievedEntry[0]['reflection2'];
 
-
+    $jEntry = $retrievedEntry[0]['journal'];
 
     // Determines whether text below is green or grey; dependinng on checkbox value
     $colourArray = array();
@@ -69,9 +72,6 @@ if (count($retrievedEntry)>=1) {
     else array_push($colourArray, 'grey');
 
 }
-
-
-
 
 
 
@@ -90,7 +90,7 @@ if (count($retrievedEntry)>=1) {
         </div>
     <?php endif ?>
 
-    <?php if (count($retrievedEntry) == 1): ?>
+    <?php if (count($retrievedEntry) >= 1): ?>
         <div class="block day-results">
             <!-- display some stuff -->
             <h1>Question 1: Placeholder</h1>
@@ -112,6 +112,8 @@ if (count($retrievedEntry)>=1) {
 
                 if ($g3 != NULL) echo '<h3 class = "" style="color:'.$colourArray[2].';">'.$g3.'</h3>  <br>';
                 if ($r3 != NULL) echo '<p class = "">'.$r3.'</p>    <br>';
+
+                if ($jEntry != NULL) echo '<p>'.$jEntry.'<p>';
             ?>
 
 
