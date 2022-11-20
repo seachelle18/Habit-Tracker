@@ -29,13 +29,19 @@ if (isset($_POST['submit'])) {
     $reflection1 = $_POST['reflection1'];
     $reflection2 = $_POST['reflection2'];
 
-    if ($_POST['checkbox0'] === "on") {
+    if (isset($_POST['checkbox0'])) {
+        if ($_POST['checkbox0'] === "on") {
         $checkbox0 = 1; }
+    }
     if ($_POST['checkbox1'] === "on") {
         $checkbox1 = 1; }
     if ($_POST['checkbox2'] === "on") {
         $checkbox2 = 1; }
     
+    
+
+
+
     $journal = $_POST['journal'];
     $array = [$username, $date, $question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2];
 
