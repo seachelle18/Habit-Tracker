@@ -2,6 +2,10 @@
 include "./header.html";
 include "./questionbank.php";
 
+$reflection0 = $reflection1 = $reflection2 = '';
+$checkbox0 = $checkbox1 = $checkbox2 = NULL;
+$journal = '';
+
 //get stuff from SQL database
 $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
 ?>
@@ -21,8 +25,8 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
         <?php foreach($goalResponses as $goal): ?>
             <div class="response-container">
                 <p class="goal-response-text"><?php echo $goal; ?></p>
-                <input type="text" class="goal-text">
-                <input type="checkbox" class="goal-checkbox">
+                <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses)?>>
+                <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses)?>>
             </div>
         <?php endforeach; ?>
         <label for="journal" class="form-label">Journal entry for today:</label>

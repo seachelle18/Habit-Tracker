@@ -18,12 +18,6 @@ if (isset($_POST['submit'])) {
 
 ?>
 <body>
-<div class="date">
-    <?php 
-    date_default_timezone_set("America/Edmonton");
-    echo "Today is " . date('l, F j, Y');
-    ?>
-</div>
 <div class="block">
     <form class="morning-entry" method="POST">
         <?php foreach ($questionBank as $question): ?>
