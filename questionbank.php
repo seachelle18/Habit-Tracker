@@ -29,7 +29,7 @@ function get_quote() {
     if ($err) {
       echo "cURL Error #:" . $err;
     } else {
-      echo ($return[0]->q);
+      return ($return[0]->q);
     }
 }
 

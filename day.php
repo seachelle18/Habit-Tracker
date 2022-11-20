@@ -32,9 +32,7 @@ if (isset($_POST['submit'])) {
 <body>
 <!-- <div class="moving">
 </div> -->
-<div class="date">
-    <?php echo "Today is " . date('l, F j, Y'); ?>
-</div>
+
 <div class="block quote">
     <?php echo '"' . $quote . '"'; ?>
 </div>
