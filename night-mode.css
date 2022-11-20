@@ -1,10 +1,27 @@
-body {
+/* body {
     background: url("pictures/night-sky.png") no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+} */
+
+body {
+    background: url("pictures/moon.png") no-repeat, url("pictures/night-sky.png") no-repeat center center fixed;
+    -moz-background-size: 20vw, cover;
+    -webkit-background-size: 20vw, cover;
+    -o-background-size: 20vw, cover;
+    background-size: 20vw, cover;
 }
+
+/* .navbar::before {
+    content: '';
+    background: url("pictures/moon.png");
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: -1;
+} */
 
 .navbar {
     margin: 0;
@@ -37,12 +54,31 @@ body {
     color: white;
 }
 
-/* .bubble {
-    text-align: center;
-    background-color: antiquewhite;
-    border: 3px solid burlywood;
-    border-radius: 15px;
-    padding: 10px;
+.moving {
+    background-image: url("pictures/moon.png");
+    background-repeat: no-repeat;
+    /* background-position: top -10px left -270px; */
+    height: 50vh;
+    padding: 0px;
+    margin: 0px;
+    top: -200px;
+    left: -100px;
+    z-index: -1;
+}
+
+/* .moving {
+    
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
 } */
 
 form {

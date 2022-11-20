@@ -5,11 +5,11 @@
 } */
 
 body {
-    background: url("pictures/sky-drawing.png") no-repeat center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url("pictures/sun.png") no-repeat, url("pictures/sky-drawing.png") no-repeat center center fixed;
+    -moz-background-size: 25vw, cover;
+    -webkit-background-size: 25vw, cover;
+    -o-background-size: 25vw, cover;
+    background-size: 25vw, cover;
 }
 
 /* .moving {
