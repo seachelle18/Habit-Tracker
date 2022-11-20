@@ -2,10 +2,22 @@
 include "./header.php";
 include "./questionbank.php";
 
+session_start();
+$username = $_SESSION['username'];
+$chosenDate = date('Y-m-d');
+
 $question0 = $question1 = $question2 = 0;
 $reflection0 = $reflection1 = $reflection2 = '';
 $checkbox0 = $checkbox1 = $checkbox2 = 0;
 $journal = '';
+
+    $pdo = new PDO ('sqlite:goals.db');
+    $sql_pull = 'SELECT goal0, goal1, goal2 FROM goal WHERE userid = ? AND date = ?;';
+    $stmt_pull = $pdo->prepare($sql_pull);
+    $stmt_pull->execute([$username, $chosenDate]);
+    $goalResponses = $stmt_pull->fetchAll(PDO::FETCH_ASSOC);
+    var_dump($goalResponses);
+
 
 if (isset($_POST['submit'])) {
     $question0 = (int) $_POST['question0'];
@@ -23,10 +35,16 @@ if (isset($_POST['submit'])) {
         $checkbox2 = 1; }
     
     $journal = $_POST['journal'];
+
+
+    $sql_insert = 'INSERT INTO goal (userid, date, question0, question1, question2, reflection0, reflection1, reflection2, checkbox0, checkbox1, checkbox2) VALUES (?,?,?,?,?,?,?,?,?,?,?)';
+    $stmt_insert = $pdo->prepare($sql_insert);
+    $stmt_insert->execute([$username, $date, $question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2]);
+
+
 }
 
-//get stuff from SQL database
-$goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
+
 ?>
 
 <body>

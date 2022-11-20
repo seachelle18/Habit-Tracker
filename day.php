@@ -1,6 +1,7 @@
 <?php 
 session_start();
 $username = $_SESSION['username'];
+$date = date('Y-m-d');
 
 
 include "./header.php";
@@ -9,7 +10,7 @@ $question0 = $question1 = $question2 = 5;
 $goal0 = $goal1 = $goal2 = '';
 
 //Configure PDO
-$pdo = new PDO ('sqlite:HackTheChange.db');
+$pdo = new PDO ('sqlite:goals.db');
 
 
 if (isset($_POST['submit'])) {
@@ -21,9 +22,9 @@ if (isset($_POST['submit'])) {
     $goal2 = $_POST['goal2'];
 
     //write to SQL
-    $sql = 'INSERT INTO goals (userid, question0, question1, question2, goal0, goal1, goal2) VALUES (?,?,?,?,?,?,?)';
+    $sql = 'INSERT INTO goal (userid, date, question0, question1, question2, goal0, goal1, goal2) VALUES (?,?,?,?,?,?,?,?)';
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$username, $question0, $question1, $question2, $goal0, $goal1, $goal2]);
+    $stmt->execute([$username, $date, $question0, $question1, $question2, $goal0, $goal1, $goal2]);
     
 }
 
