@@ -40,18 +40,18 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
                 <input type="range" min="1" max="10" value="5" class="slider" name=<?php echo 'question' . array_search($question, $questionBank)?>>
             </div>
         <?php endforeach; ?>
-        <p class="goal-question">Reflect on your mental health goals from today. Do you feel that you were successful in each one?</p>
+        <p class="goal-question">Reflect on your mental health goals from today.<br>Do you feel that you were successful in each one?</p>
         <?php foreach($goalResponses as $goal): ?>
             <div class="response-container">
                 <p class="goal-response-text"><?php echo $goal; ?></p>
                 <div class="response-check">
-                <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses)?>>
+                    <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses)?>>
                     <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses)?>>
                 </div>
             </div>
         <?php endforeach; ?>
         <label for="journal" class="form-label">Journal entry for today:</label>
-        <input type="textarea" class="journal-entry" name="journal">
+        <textarea cols="50" rows="7" class="journal-entry" name="journal"></textarea>
         <input type="submit" name="submit" value="Submit" class="form-button">
         <input type="reset" name="reset" value="Reset" class="form-button">
         </div>
