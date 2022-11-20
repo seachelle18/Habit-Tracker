@@ -18,6 +18,11 @@ body {
     margin-top: 110px;
 }
 
+.login-form {
+    width: 25vw; 
+}
+
+
 .navbar {
     display: block;
     margin: 0;
@@ -82,6 +87,10 @@ form * {
 
 .goal-question {
     text-align: center;
+}
+
+.goal-text {
+    width: fit-content;
 }
 
 input[type="submit"], input[type="reset"] {

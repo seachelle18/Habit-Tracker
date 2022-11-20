@@ -104,14 +104,14 @@ if (count($retrievedEntry)>=1) {
 
 
             <?php // Reminder to coder: the color GREEN might be too ugly, fix as needed, probably change to black
-                if ($g1 != NULL) echo '<h3 class = "" style="color:'.$colourArray[0].';">'.$g1.'</h3>  <br>'; //add styling later (based on checkmark)
-                if ($r1 != NULL) echo '<p class = "">' . $r1 . '</p>    <br>';
+                if ($g1 != NULL) echo '<p class = "" style="color:'.$colourArray[0].';">'.$g1.'</p>  <br>'; //add styling later (based on checkmark)
+                if ($r1 != NULL) echo '<p class = "goal-reflect">' . $r1 . '</p>    <br>';
 
-                if ($g2 != NULL) echo '<h3 class = "" style="color:'.$colourArray[1].';">'.$g2.'</h3>  <br>';
-                if ($r2 != NULL) echo '<p class = "">'.$r2.'</p>    <br>';
+                if ($g2 != NULL) echo '<p class = "" style="color:'.$colourArray[1].';">'.$g2.'</p>  <br>';
+                if ($r2 != NULL) echo '<p class = "goal-reflect">'.$r2.'</p>    <br>';
 
-                if ($g3 != NULL) echo '<h3 class = "" style="color:'.$colourArray[2].';">'.$g3.'</h3>  <br>';
-                if ($r3 != NULL) echo '<p class = "">'.$r3.'</p>    <br>';
+                if ($g3 != NULL) echo '<p class = "" style="color:'.$colourArray[2].';">'.$g3.'</p>  <br>';
+                if ($r3 != NULL) echo '<p class = "goal-reflect">'.$r3.'</p>    <br>';
 
                 if ($jEntry != NULL) echo '<p class="journal-entry">'.$jEntry.'<p>';
             ?>
