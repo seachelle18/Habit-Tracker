@@ -33,10 +33,14 @@ if (isset($_POST['submit'])) {
         if ($_POST['checkbox0'] === "on") {
         $checkbox0 = 1; }
     }
-    if ($_POST['checkbox1'] === "on") {
-        $checkbox1 = 1; }
-    if ($_POST['checkbox2'] === "on") {
-        $checkbox2 = 1; }
+    if (isset($_POST['checkbox1'])) {
+        if ($_POST['checkbox1'] === "on") {
+        $checkbox0 = 1; }
+    }
+    if (isset($_POST['checkbox2'])) {
+        if ($_POST['checkbox2'] === "on") {
+        $checkbox0 = 1; }
+    }
     
     
 
