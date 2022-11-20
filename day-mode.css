@@ -18,6 +18,7 @@ body {
     padding: 0;
     height: 50px;
     border-bottom: 2px solid transparent;
+    display: block;
 }
 
 .navbar ul {
@@ -38,10 +39,10 @@ body {
 }
 
 .date {
-    margin-right: 20px;
+    margin: 20px;
     font-family: monospace, sans-serif;
     color: grey;
-    float: right;
+    text-align: end;
 }
 
 .login-box {
