@@ -204,6 +204,15 @@ textarea {
 }
 
 .goal-reflect {
-    font-family: sans-serif;
+    font-family: monospace;
     color: grey;
+    font-size: medium;
+}
+
+.goal-wish {
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    width: fit-content;
+    border-radius: 10px;
 }

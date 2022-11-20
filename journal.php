@@ -62,14 +62,14 @@ if (count($retrievedEntry)>=1) {
 
     // Determines whether text below is green or grey; dependinng on checkbox value
     $colourArray = array();
-    if ($c1 == 1) array_push($colourArray, "#C1E1C1");
-    else array_push($colourArray, 'grey');
+    if ($c1 == 1) array_push($colourArray, "black");
+    else array_push($colourArray, 'red');
 
-    if ($c2 == 1) array_push($colourArray, "#C1E1C1");
-    else array_push($colourArray, 'grey');
+    if ($c2 == 1) array_push($colourArray, "black");
+    else array_push($colourArray, 'red');
 
-    if ($c3 == 1) array_push($colourArray, "#C1E1C1");
-    else array_push($colourArray, 'grey');
+    if ($c3 == 1) array_push($colourArray, "black");
+    else array_push($colourArray, 'red');
 
 }
 
@@ -93,24 +93,24 @@ if (count($retrievedEntry)>=1) {
     <?php if (count($retrievedEntry) >= 1): ?>
         <div class="block day-results">
             <!-- display some stuff -->
-            <p>Question 1: Placeholder</p>
+            <p>Question 1: How are you feeling right now?</p>
             <input type="range"  min="0" max="10" value = <?=$q1?> disabled/>
 
-            <p>Question 2: Placeholder</p>
+            <p>Question 2: How much energy do you have today?</p>
             <input type="range"  min="0" max="10" value = <?=$q2?> disabled/>
 
-            <p>Question 3: Placeholder</p>
+            <p>Question 3: How are your stress levels right now?</p>
             <input type="range"  min="0" max="10" value = <?=$q3?> disabled/>
 
 
             <?php // Reminder to coder: the color GREEN might be too ugly, fix as needed, probably change to black
-                if ($g1 != NULL) echo '<p class = "" style="color:'.$colourArray[0].';">'.$g1.'</p>  <br>'; //add styling later (based on checkmark)
+                if ($g1 != NULL) echo '<p class = "goal-wish" style="color:'.$colourArray[0].';">'.$g1.'</p>  <br>'; //add styling later (based on checkmark)
                 if ($r1 != NULL) echo '<p class = "goal-reflect">' . $r1 . '</p>    <br>';
 
-                if ($g2 != NULL) echo '<p class = "" style="color:'.$colourArray[1].';">'.$g2.'</p>  <br>';
+                if ($g2 != NULL) echo '<p class = "goal-wish" style="color:'.$colourArray[1].';">'.$g2.'</p>  <br>';
                 if ($r2 != NULL) echo '<p class = "goal-reflect">'.$r2.'</p>    <br>';
 
-                if ($g3 != NULL) echo '<p class = "" style="color:'.$colourArray[2].';">'.$g3.'</p>  <br>';
+                if ($g3 != NULL) echo '<p class = "goal-wish" style="color:'.$colourArray[2].';">'.$g3.'</p>  <br>';
                 if ($r3 != NULL) echo '<p class = "goal-reflect">'.$r3.'</p>    <br>';
 
                 if ($jEntry != NULL) echo '<p class="journal-entry">'.$jEntry.'<p>';

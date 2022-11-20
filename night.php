@@ -1,5 +1,5 @@
 <?php 
-include "./header.php";
+include "./header-night.php";
 include "./questionbank.php";
 
 session_start();
@@ -18,7 +18,6 @@ $journal = '';
     $stmt_pull = $pdo->prepare($sql_pull);
     $stmt_pull->execute([$username, $date]);
     $goalResponses = $stmt_pull->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($goalResponses);
 
 
 if (isset($_POST['submit'])) {
@@ -56,7 +55,6 @@ if (isset($_POST['submit'])) {
     $sql_update = 'UPDATE goal SET question0 = ?, question1 = ?, question2 = ?, reflection0 = ?, reflection1 = ?, reflection2 = ?, checkbox0 = ?, checkbox1= ?, checkbox2= ?, journal = ? WHERE userid='.$username.' and date="'.$date.'";';
     $stmt= $pdo->prepare($sql_update);
     $stmt->execute([$question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2, $journal]);
-    echo $sql_update;
 
 
     // Legacy Code 
@@ -98,9 +96,4 @@ if (isset($_POST['submit'])) {
         <input type="reset" name="reset" value="Reset" class="form-button">
         </form>
         </div>
-        <?php var_dump($reflection0); var_dump($reflection1); var_dump($reflection2);
-        var_dump($question0); var_dump($question1); var_dump($question2); 
-        var_dump($checkbox0); var_dump($checkbox1); var_dump($checkbox2);
-        var_dump($journal);  
-        ?>
 </body>
