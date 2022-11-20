@@ -7,12 +7,15 @@ body {
 }
 
 .navbar {
+    margin: 0;
+    padding: 0;
     height: 50px;
-    border-bottom: 2px solid lightblue;
+    border-bottom: 2px solid #f0c420;
 }
 
 .navbar ul {
     list-style-type: none;
+    float: right;
 }
 
 .navbar li {
@@ -21,8 +24,17 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: grey;
-    background:linear-gradient(180deg, transparent 60%, lightblue 60%);
+    font-family: monospace, sans-serif;
+    margin: 20px;
+    color: white;
+    background:linear-gradient(180deg, transparent 70%, #f0c420 60%);
+}
+
+.date {
+    padding-top: 10px;
+    margin-right: 20px;
+    font-family: monospace, sans-serif;
+    color: white;
 }
 
 /* .bubble {
@@ -34,12 +46,15 @@ body {
 } */
 
 form {
+    font-family: sans-serif;
     height: fit-content;
     width: 30vw;
     border: 2px solid wheat;
-    border-radius: 4%;
-    margin: 20px auto;
+    border-radius: 10px;
+    margin: 40px auto;
     align-content: center;
+    /* position: relative; */
+    background-color: wheat;
 }
 
 form * {
@@ -58,12 +73,12 @@ form * {
     padding-bottom: 10px;
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="reset"] {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: lightblue;
     color: black;
 }
@@ -99,4 +114,21 @@ input[type="range"]::-webkit-slider-thumb {
     height: 14px;
     width: 12px;
     border-radius: 6px;
+}
+
+.quote {
+    font-family: monospace;
+    font-size: 40px;
+    padding: 40px;
+    margin: 40px 40px;
+    text-align: center;
+    color: white;
+}
+
+.date {
+    float: right;
+}
+
+.night-entry {
+    border-radius: 15px;
 }
