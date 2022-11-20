@@ -47,16 +47,22 @@ if (isset($_POST['submit'])) {
 
 
     $journal = $_POST['journal'];
-    $array = [$username, $date, $question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2];
+    //$array = [$username, $date, $question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2];
+    //
+    //foreach ($array as $element) {
+    //    echo $element;
+    //}
 
-    foreach ($array as $element) {
-        echo $element;
-    }
+    $sql_update = 'UPDATE goal SET question0 = ?, question1 = ?, question2 = ?, reflection0 = ?, reflection1 = ?, reflection2 = ?, checkbox0 = ?, checkbox1= ?, checkbox2= ?, journal = ? WHERE userid='.$username.' and date="'.$date.'";';
+    $stmt= $pdo->prepare($sql_update);
+    $stmt->execute([$question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2, $journal]);
+    echo $sql_update;
 
 
-    $sql_insert = 'INSERT INTO goal (userid, date, question0, question1, question2, reflection0, reflection1, reflection2, checkbox0, checkbox1, checkbox2) VALUES (?,?,?,?,?,?,?,?,?,?,?)';
-    $stmt_insert = $pdo->prepare($sql_insert);
-    $stmt_insert->execute([$username, $date, $question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2]);
+    // Legacy Code 
+    //$sql_insert = 'INSERT INTO goal (userid, date, question0, question1, question2, reflection0, reflection1, reflection2, checkbox0, checkbox1, checkbox2) VALUES (?,?,?,?,?,?,?,?,?,?,?)';
+    //$stmt_insert = $pdo->prepare($sql_insert);
+    //$stmt_insert->execute([$username, $date, $question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2]);
 
 
 }
