@@ -1,8 +1,17 @@
 <?php 
+session_start();
+// $username = $_SESSION['username'];
+$username = "maggie";
+
 include "./header.php";
 include "./questionbank.php";
+require "./goal (2).db";
 $question0 = $question1 = $question2 = 5;
 $goal0 = $goal1 = $goal2 = '';
+
+//Configure PDO
+$pdo = new PDO ('sqlite:C:\Users\michellec\xampp\htdocs\habit-tracker\Habit-Tracker\goal (2).db');
+
 
 if (isset($_POST['submit'])) {
     $question0 = (int) $_POST['question0'];
@@ -13,6 +22,9 @@ if (isset($_POST['submit'])) {
     $goal2 = $_POST['goal2'];
 
     //write to SQL
+    $sql = 'INSERT INTO goals (userid, question0, question1, question2, goal0, goal1, goal2) VALUES (?,?,?,?,?,?,?)';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$username, $question0, $question1, $question2, $goal0, $goal1, $goal2]);
     
 }
 
