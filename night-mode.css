@@ -158,7 +158,7 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     margin-top: -2px;
-    background-color: salmon;
+    background-color: #042f66;
     height: 14px;
     width: 12px;
     border-radius: 6px;
@@ -183,4 +183,9 @@ label {
 
 textarea {
     border-radius: 10px;
+}
+
+.journal-retrieve {
+    width: 30vw;
+    margin: 100px auto auto auto;
 }
