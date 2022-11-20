@@ -1,7 +1,3 @@
-
-
-
-
 <?php
 session_start();
 $uname = $_POST['username'];
@@ -12,7 +8,7 @@ $_SESSION['username'] = $uname;
 
 <?php
 
-    $PATH_TO_SQLITE_FILE = "C:\Users\michellec\xampp\htdocs\habit-tracker\Habit-Tracker\login (2).db"; // PUT IN PROPER PATH AFTERWARDS
+    $PATH_TO_SQLITE_FILE = "HackTheChange.db";
 
     $pdo = new PDO("sqlite:" . $PATH_TO_SQLITE_FILE);
     $sql = "
@@ -24,7 +20,7 @@ $_SESSION['username'] = $uname;
 
     foreach($allAccounts as $Account) {
         if ($Account["userid"] == $uname && $Account["password"] == $pword) { // FIX LATER, INSERT DYNAMIC VARIABLE IN PLACE OF ""
-            echo "WORKING";
+            header('Location:day.php');
             break;
         }
     }
@@ -33,10 +29,11 @@ $_SESSION['username'] = $uname;
 
 
 
-
-
 <html>
     <body>
-        <?php echo $uname . $pword?>
+        <h1>
+            Sorry your password was wrong! 
+        </h1>
+        <a href="index.php">Back to index!</a>
     </body>
 </html>
