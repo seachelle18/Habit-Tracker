@@ -5,23 +5,23 @@
 } */
 
 body {
-    background: url("/pictures/sky-drawing.png") no-repeat center center fixed;
+    background: url("pictures/sky-drawing.png") no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.moving {
+/* .moving {
     position: relative;
-    background-image: url("/pictures/sun.png");
+    background-image: url("pictures/sun.png");
     background-repeat: no-repeat;
-    /* background-position: top -10px left -270px; */
+    background-position: top -10px left -270px;
     height: 50vh;
-    /* padding: 0px;
-    margin: 0px; */
-    /* top: -30px;
-    left: -300px; */
+    padding: 0px;
+    margin: 0px;
+    top: -30px;
+    left: -300px;
 }
 
 @keyframes fadeIn {
@@ -33,7 +33,7 @@ body {
       opacity: 1;
       transform: translateX(0);
     }
-}
+} */
 
 .navbar {
     margin: 0;

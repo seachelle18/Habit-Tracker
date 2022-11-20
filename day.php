@@ -18,9 +18,8 @@ if (isset($_POST['submit'])) {
 
 ?>
 <body>
-<div>
-    <img class="moving sun" src="sun.png">
-</div>
+<!-- <div class="moving">
+</div> -->
 <div class="date">
     <?php echo "Today is " . date('l, F j, Y'); ?>
 </div>
