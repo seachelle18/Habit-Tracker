@@ -6,6 +6,8 @@
 session_start();
 $uname = $_POST['username'];
 $pword = $_POST['password'];
+$_SESSION['username'] = $uname;
+
 ?>
 
 <?php
