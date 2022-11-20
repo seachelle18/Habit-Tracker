@@ -1,4 +1,20 @@
+/* body {
+    background-image: url("sky.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+
+body {
+    background: url("sky-drawing.png") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .navbar {
+    margin: 0;
+    padding: 0;
     height: 50px;
     border-bottom: 2px solid lightblue;
 }
@@ -30,7 +46,7 @@ form {
     width: 30vw;
     border: 2px solid wheat;
     border-radius: 4%;
-    margin: 20px auto;
+    margin: 40px auto;
     align-content: center;
 }
 

@@ -1,0 +1,100 @@
+body {
+    background-image: url("Untitled-design.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar {
+    height: 50px;
+    border-bottom: 2px solid lightblue;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: grey;
+    background:linear-gradient(180deg, transparent 60%, lightblue 60%);
+}
+
+/* .bubble {
+    text-align: center;
+    background-color: antiquewhite;
+    border: 3px solid burlywood;
+    border-radius: 15px;
+    padding: 10px;
+} */
+
+form {
+    height: fit-content;
+    width: 30vw;
+    border: 2px solid wheat;
+    border-radius: 4%;
+    margin: 20px auto;
+    align-content: center;
+}
+
+form * {
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.question {
+    text-align: center;
+}
+
+.goal {
+    padding-bottom: 10px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+input, label {
+    border-radius: 20px;
+    width: 50%;
+    max-width: none;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: lightblue;
+    height: 10px;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -2px;
+    background-color: salmon;
+    height: 14px;
+    width: 12px;
+    border-radius: 6px;
+}
