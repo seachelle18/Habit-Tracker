@@ -72,12 +72,13 @@ if (isset($_POST['submit'])) {
             </div>
         <?php endforeach; ?>
         <p class="goal-question">Reflect on your mental health goals from today.<br>Do you feel that you were successful in each one?</p>
+        <?php $j = 0; $k = 0; ?>
         <?php foreach($goalResponses[0] as $goal): ?>
             <div class="response-container">
                 <p class="goal-response-text"><?php echo $goal; ?></p>
                 <div class="response-check">
-                    <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . $count[$i];?>>
-                    <input type="text" class="goal-text" name=<?php echo 'reflection' . $count[$i]; $i++; ?>>
+                    <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . $j;?>> <?php $j++; ?>
+                    <input type="text" class="goal-text" name=<?php echo 'reflection' . $k;?>> <?php $k++; ?>
                 </div>
             </div>
         <?php endforeach; ?>
