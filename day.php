@@ -18,6 +18,18 @@ if (isset($_POST['submit'])) {
 
 ?>
 <body>
+<<<<<<< Updated upstream
+=======
+<div>
+    <img class="moving sun" src="sun.png">
+</div>
+<div class="date">
+    <?php echo "Today is " . date('l, F j, Y'); ?>
+</div>
+<div class="block quote">
+    <?php echo '"' . $quote . '"'; ?>
+</div>
+>>>>>>> Stashed changes
 <div class="block">
     <form class="morning-entry" method="POST">
         <?php foreach ($questionBank as $question): ?>

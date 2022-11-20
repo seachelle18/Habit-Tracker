@@ -12,6 +12,27 @@ body {
     background-size: cover;
 }
 
+.sun {
+    position: absolute;
+    height: 100vh;
+    margin: auto;
+    animation: fadeIn 3s;
+    transform: scaleX(-1);
+    top: -10px;
+    left: -290px;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
 .navbar {
     margin: 0;
     padding: 0;
@@ -21,6 +42,7 @@ body {
 
 .navbar ul {
     list-style-type: none;
+    float: right;
 }
 
 .navbar li {
@@ -29,6 +51,8 @@ body {
 
 .navbar a {
     text-decoration: none;
+    font-family: monospace, sans-serif;
+    margin: 20px;
     color: grey;
     background:linear-gradient(180deg, transparent 60%, lightblue 60%);
 }
@@ -48,6 +72,7 @@ form {
     border-radius: 4%;
     margin: 40px auto;
     align-content: center;
+    position: relative;
 }
 
 form * {
@@ -107,4 +132,17 @@ input[type="range"]::-webkit-slider-thumb {
     height: 14px;
     width: 12px;
     border-radius: 6px;
+}
+
+.quote {
+    font-family: monospace;
+    font-size: 40px;
+    margin: 0px 40px;
+    padding: 40px;
+    text-align: center;
+    position: absolute;
+}
+
+.date {
+    float: right;
 }
