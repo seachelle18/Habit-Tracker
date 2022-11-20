@@ -207,3 +207,12 @@ textarea {
     width: 30vw;
     margin: 100px auto auto auto;
 }
+
+.day-results {
+    text-align: center;
+    font-size: medium;
+    font-family: sans-serif;
+    color: red;
+    font-weight: light;
+    background-color: wheat;
+}

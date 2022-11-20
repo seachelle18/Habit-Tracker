@@ -91,7 +91,7 @@ if (count($retrievedEntry)>=1) {
     <?php endif ?>
 
     <?php if (count($retrievedEntry) == 1): ?>
-        <div class="block">
+        <div class="block day-results">
             <!-- display some stuff -->
             <h1>Question 1: Placeholder</h1>
             <input type="range"  min="0" max="10" value = <?=$q1?> disabled/>
