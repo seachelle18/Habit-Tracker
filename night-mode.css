@@ -49,10 +49,10 @@ body {
 }
 
 .date {
-    margin-right: 20px;
+    margin: 20px;
     font-family: monospace, sans-serif;
     color: white;
-    float: right;
+    text-align: end;
 }
 
 
@@ -195,7 +195,8 @@ textarea {
     font-weight: bold;
     color: brown;
     background-color: white;
-    border-radius: 10px;;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .goal-reflect {
