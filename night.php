@@ -4,6 +4,8 @@ include "./questionbank.php";
 
 session_start();
 $username = $_SESSION['username'];
+$_SESSION['username'] = $username;
+
 $chosenDate = date('Y-m-d');
 
 $question0 = $question1 = $question2 = 0;
