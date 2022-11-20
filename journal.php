@@ -62,13 +62,13 @@ if (count($retrievedEntry)>=1) {
 
     // Determines whether text below is green or grey; dependinng on checkbox value
     $colourArray = array();
-    if ($c1 == 1) array_push($colourArray, "green");
+    if ($c1 == 1) array_push($colourArray, "#C1E1C1");
     else array_push($colourArray, 'grey');
 
-    if ($c2 == 1) array_push($colourArray, "green");
+    if ($c2 == 1) array_push($colourArray, "#C1E1C1");
     else array_push($colourArray, 'grey');
 
-    if ($c3 == 1) array_push($colourArray, "green");
+    if ($c3 == 1) array_push($colourArray, "#C1E1C1");
     else array_push($colourArray, 'grey');
 
 }
@@ -93,7 +93,6 @@ if (count($retrievedEntry)>=1) {
     <?php if (count($retrievedEntry) >= 1): ?>
         <div class="block day-results">
             <!-- display some stuff -->
-<<<<<<< HEAD
             <p>Question 1: Placeholder</p>
             <input type="range"  min="0" max="10" value = <?=$q1?> disabled/>
 
@@ -101,15 +100,6 @@ if (count($retrievedEntry)>=1) {
             <input type="range"  min="0" max="10" value = <?=$q2?> disabled/>
 
             <p>Question 3: Placeholder</p>
-=======
-            <h1>Question 1: How are you feeling right now?</h1>
-            <input type="range"  min="0" max="10" value = <?=$q1?> disabled/>
-
-            <h1>Question 2: How much energy do you have today?</h1>
-            <input type="range"  min="0" max="10" value = <?=$q2?> disabled/>
-
-            <h1>Question 3: How are your stress levels right now?</h1>
->>>>>>> 6b568c61aeb430f045d83e92b1f978eeb5fa3e5e
             <input type="range"  min="0" max="10" value = <?=$q3?> disabled/>
 
 
@@ -123,7 +113,7 @@ if (count($retrievedEntry)>=1) {
                 if ($g3 != NULL) echo '<h3 class = "" style="color:'.$colourArray[2].';">'.$g3.'</h3>  <br>';
                 if ($r3 != NULL) echo '<p class = "">'.$r3.'</p>    <br>';
 
-                if ($jEntry != NULL) echo '<p>'.$jEntry.'<p>';
+                if ($jEntry != NULL) echo '<p class="journal-entry">'.$jEntry.'<p>';
             ?>
 
 

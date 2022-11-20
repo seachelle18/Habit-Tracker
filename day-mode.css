@@ -1,3 +1,8 @@
+/* body {
+    background-image: url("sky.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
 
 body {
     background: url("pictures/sun.png") no-repeat, url("pictures/sky-drawing.png") no-repeat center center fixed;
@@ -9,7 +14,6 @@ body {
 
 
 .navbar {
-    display: block;
     margin: 0;
     padding: 0;
     height: 50px;
@@ -55,6 +59,7 @@ form {
     margin: 60px auto 40px auto;
     padding: 0 25px;
     align-content: center;
+    /* position: relative; */
     background-color: wheat;
 }
 
@@ -182,4 +187,16 @@ textarea {
     padding: 20px 40px;
     margin: 100px auto;
     border-radius: 10px;
+}
+
+/* .day-results h1 {
+
+} */
+
+.journal-entry {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: brown;
+    background-color: white;
+    border-radius: 10px;;
 }

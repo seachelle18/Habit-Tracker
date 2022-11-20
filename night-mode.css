@@ -180,3 +180,11 @@ textarea {
     margin: 100px auto;
     border-radius: 10px;
 }
+
+.journal-entry {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: brown;
+    background-color: white;
+    border-radius: 10px;;
+}
