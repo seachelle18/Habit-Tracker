@@ -1,5 +1,5 @@
 <?php 
-include "./header.html";
+include "./header.php";
 include "./questionbank.php";
 $question0 = $question1 = $question2 = 5;
 $goal0 = $goal1 = $goal2 = '';
