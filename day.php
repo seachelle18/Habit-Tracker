@@ -1,15 +1,16 @@
 <?php 
 session_start();
-$username = $_SESSION['username'];
+// $username = $_SESSION['username'];
+$username = "maggie";
 
 include "./header.php";
 include "./questionbank.php";
-require "./goal (2).sql";
+require "./goal (2).db";
 $question0 = $question1 = $question2 = 5;
 $goal0 = $goal1 = $goal2 = '';
 
 //Configure PDO
-$pdo = new PDO ('sqlite:C:\Users\michellec\xampp\htdocs\habit-tracker\Habit-Tracker\goal (2).sql');
+$pdo = new PDO ('sqlite:C:\Users\michellec\xampp\htdocs\habit-tracker\Habit-Tracker\goal (2).db');
 
 
 if (isset($_POST['submit'])) {
