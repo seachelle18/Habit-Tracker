@@ -37,10 +37,11 @@ body {
 
 
 .navbar {
+    display: block;
     margin: 0;
     padding: 0;
     height: 50px;
-    border-bottom: 2px solid lightblue;
+    border-bottom: 2px solid transparent;
 }
 
 .navbar ul {
@@ -61,10 +62,10 @@ body {
 }
 
 .date {
-    padding-top: 10px;
     margin-right: 20px;
     font-family: monospace, sans-serif;
     color: grey;
+    float: right;
 }
 
 /* .bubble {
@@ -75,13 +76,18 @@ body {
     padding: 10px;
 } */
 
+.login-box {
+    margin-top: 110px;
+}
+
 form {
     font-family: sans-serif;
     height: fit-content;
-    width: 30vw;
+    width: fit-content;
     border: 2px solid wheat;
     border-radius: 10px;
-    margin: 40px auto;
+    margin: 60px auto 40px auto;
+    padding: 0 25px;
     align-content: center;
     /* position: relative; */
     background-color: wheat;
@@ -101,6 +107,10 @@ form * {
 
 .goal {
     padding-bottom: 10px;
+}
+
+.goal-question {
+    text-align: center;
 }
 
 input[type="submit"], input[type="reset"] {
@@ -149,15 +159,39 @@ input[type="range"]::-webkit-slider-thumb {
 .quote {
     font-family: monospace;
     font-size: 40px;
-    padding: 40px;
-    margin: 40px 40px;
+    padding: 60px;
+    margin: 40px 40px 0px 40px;
     text-align: center;
-}
-
-.date {
-    float: right;
 }
 
 .night-entry {
     border-radius: 15px;
 }
+
+.response-container {
+    margin: 0 7%;
+    text-align: center;
+}
+
+.response-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.response-check input[type="text"], input[type="checkbox"]{
+    margin: auto 0;
+}
+
+input[type="text"] {
+    width: 70%;
+}
+
+label {
+    text-align: center;
+}
+
+textarea {
+    border-radius: 10px;
+}
+
