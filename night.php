@@ -6,6 +6,7 @@ session_start();
 $username = $_SESSION['username'];
 $date = date('Y-m-d');
 $count = [0,1,2];
+$i = 0;
 
 $question0 = $question1 = $question2 = 0;
 $reflection0 = $reflection1 = $reflection2 = '';
@@ -36,6 +37,11 @@ if (isset($_POST['submit'])) {
         $checkbox2 = 1; }
     
     $journal = $_POST['journal'];
+    $array = [$username, $date, $question0, $question1, $question2, $reflection0, $reflection1, $reflection2, $checkbox0, $checkbox1, $checkbox2];
+
+    foreach ($array as $element) {
+        echo $element;
+    }
 
 
     $sql_insert = 'INSERT INTO goal (userid, date, question0, question1, question2, reflection0, reflection1, reflection2, checkbox0, checkbox1, checkbox2) VALUES (?,?,?,?,?,?,?,?,?,?,?)';
@@ -64,8 +70,8 @@ if (isset($_POST['submit'])) {
             <div class="response-container">
                 <p class="goal-response-text"><?php echo $goal; ?></p>
                 <div class="response-check">
-                    <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses[0])?>>
-                    <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses[0])?>>
+                    <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . $count[$i];?>>
+                    <input type="text" class="goal-text" name=<?php echo 'reflection' . $count[$i]; $i++; ?>>
                 </div>
             </div>
         <?php endforeach; ?>
