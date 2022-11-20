@@ -2,9 +2,26 @@
 include "./header.php";
 include "./questionbank.php";
 
+$question0 = $question1 = $question2 = 0;
 $reflection0 = $reflection1 = $reflection2 = '';
-$checkbox0 = $checkbox1 = $checkbox2 = NULL;
+$checkbox0 = $checkbox1 = $checkbox2 = 0;
 $journal = '';
+
+if (isset($_POST['submit'])) {
+    $question0 = (int) $_POST['question0'];
+    $question1 = (int) $_POST['question1'];
+    $question2 = (int) $_POST['question2'];
+    $reflection0 = $_POST['reflection0'];
+    $reflection1 = $_POST['reflection1'];
+    $reflection2 = $_POST['reflection2'];
+
+    if ($_POST['checkbox0'] === "on") {
+        $checkbox0 = 1; }
+    if ($_POST['checkbox1'] === "on") {
+        $checkbox1 = 1; }
+    if ($_POST['checkbox2'] === "on") {
+        $checkbox2 = 1; }
+}
 
 //get stuff from SQL database
 $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
@@ -34,4 +51,8 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
         <input type="submit" name="submit" value="Submit" class="form-button">
         <input type="reset" name="reset" value="Reset" class="form-button">
         </div>
+        <?php var_dump($reflection0); var_dump($reflection1); var_dump($reflection2);
+        var_dump($question0); var_dump($question1); var_dump($question2); 
+        var_dump($checkbox0); var_dump($checkbox1); var_dump($checkbox2);  
+        ?>
 </body>
