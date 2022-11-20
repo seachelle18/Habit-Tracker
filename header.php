@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Habit Tracker</title>
-    <link rel="stylesheet" type="text/css" href="day-mode.css">
+    <link rel="stylesheet" type="text/css" href="night-mode.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="habit tracker, mental health">
     <meta name="description" content="Habit Tracker">
@@ -11,7 +11,7 @@
 <header class="main-header">
     <div class="navbar">
         <ul>
-            <li class="navbar-item"><a href="#">LOGO</a></li>
+            <li class="navbar-item"><a href="#">👻</a></li>
             <li class="navbar-item bubble"><a href="day.php">Morning</a></li>
             <li class="navbar-item bubble"><a href="night.php">Night</a></li>
             <li class="navbar-item bubble"><a href="journal.php">Journal</a></li>
