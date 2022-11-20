@@ -80,6 +80,8 @@ body {
     margin-top: 110px;
 }
 
+
+
 form {
     font-family: sans-serif;
     height: fit-content;
@@ -92,6 +94,12 @@ form {
     /* position: relative; */
     background-color: wheat;
 }
+
+.login-form {
+    width: 25vw; 
+}
+
+
 
 form * {
     display: block;
@@ -199,4 +207,3 @@ textarea {
     width: 30vw;
     margin: 100px auto auto auto;
 }
-

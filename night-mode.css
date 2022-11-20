@@ -12,9 +12,6 @@ body {
     -webkit-background-size: 20vw, cover;
     -o-background-size: 20vw, cover;
     background-size: 20vw, cover;
-    -webkit-transition: 1000ms linear, none;
-    -ms-transition: 1000ms linear, none;
-    transition: 1000ms linear, none;
 }
 
 /* .navbar::before {
