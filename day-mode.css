@@ -5,21 +5,23 @@
 } */
 
 body {
-    background: url("sky-drawing.png") no-repeat center center fixed;
+    background: url("/pictures/sky-drawing.png") no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.sun {
-    position: absolute;
-    height: 100vh;
-    margin: auto;
-    animation: fadeIn 3s;
-    transform: scaleX(-1);
-    top: -10px;
-    left: -290px;
+.moving {
+    position: relative;
+    background-image: url("/pictures/sun.png");
+    background-repeat: no-repeat;
+    /* background-position: top -10px left -270px; */
+    height: 50vh;
+    /* padding: 0px;
+    margin: 0px; */
+    /* top: -30px;
+    left: -300px; */
 }
 
 @keyframes fadeIn {
