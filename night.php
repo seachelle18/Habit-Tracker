@@ -44,8 +44,10 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
         <?php foreach($goalResponses as $goal): ?>
             <div class="response-container">
                 <p class="goal-response-text"><?php echo $goal; ?></p>
-                <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses)?>>
+                <div class="response-check">
                 <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses)?>>
+                    <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses)?>>
+                </div>
             </div>
         <?php endforeach; ?>
         <label for="journal" class="form-label">Journal entry for today:</label>
