@@ -14,20 +14,12 @@ body {
     background-size: 20vw, cover;
 }
 
-/* .navbar::before {
-    content: '';
-    background: url("pictures/moon.png");
-    position:absolute;
-    top:0px;
-    left:0px;
-    z-index: -1;
-} */
-
 .login-box {
     margin-top: 110px;
 }
 
 .navbar {
+    display: block;
     margin: 0;
     padding: 0;
     height: 50px;
@@ -58,32 +50,6 @@ body {
     float: right;
 }
 
-/* .moving {
-    background-image: url("pictures/moon.png");
-    background-repeat: no-repeat;
-    background-position: top -10px left -270px;
-    height: 50vh;
-    padding: 0px;
-    margin: 0px;
-    top: -200px;
-    left: -100px;
-    z-index: -1;
-} */
-
-/* .moving {
-    
-}
-
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-} */
 
 form {
     font-family: sans-serif;
@@ -91,12 +57,12 @@ form {
     width: fit-content;
     border: 2px solid wheat;
     border-radius: 10px;
-    margin: 40px auto;
+    margin: 60px auto 40px auto;
     padding: 0 25px;
     align-content: center;
-    /* position: relative; */
     background-color: wheat;
 }
+
 
 form * {
     display: block;
@@ -172,6 +138,22 @@ input[type="range"]::-webkit-slider-thumb {
 
 .night-entry {
     border-radius: 15px;
+    width: fit-content;
+}
+
+.response-container {
+    margin: 0 7%;
+    text-align: center;
+}
+
+.response-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.response-check input[type="text"], input[type="checkbox"]{
+    margin: auto 0;
 }
 
 label {
@@ -185,4 +167,16 @@ textarea {
 .journal-retrieve {
     width: 30vw;
     margin: 100px auto auto auto;
+}
+
+.day-results {
+    text-align: center;
+    font-family: sans-serif;
+    color: grey;
+    font-weight: light;
+    background-color: wheat;
+    width: 30vw;
+    padding: 20px 40px;
+    margin: 100px auto;
+    border-radius: 10px;
 }
