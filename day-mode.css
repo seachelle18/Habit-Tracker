@@ -173,6 +173,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .night-entry {
+    width: fit-content;
     border-radius: 15px;
 }
 
@@ -192,7 +193,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="text"] {
-    width: 70%;
+    width: fit-content;
 }
 
 label {
@@ -210,9 +211,12 @@ textarea {
 
 .day-results {
     text-align: center;
-    font-size: medium;
     font-family: sans-serif;
     color: grey;
     font-weight: light;
     background-color: wheat;
+    width: 30vw;
+    padding: 20px 40px;
+    margin: 100px auto;
+    border-radius: 10px;
 }

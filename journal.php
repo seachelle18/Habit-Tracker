@@ -93,13 +93,13 @@ if (count($retrievedEntry)>=1) {
     <?php if (count($retrievedEntry) >= 1): ?>
         <div class="block day-results">
             <!-- display some stuff -->
-            <h1>Question 1: Placeholder</h1>
+            <p>Question 1: Placeholder</p>
             <input type="range"  min="0" max="10" value = <?=$q1?> disabled/>
 
-            <h1>Question 2: Placeholder</h1>
+            <p>Question 2: Placeholder</p>
             <input type="range"  min="0" max="10" value = <?=$q2?> disabled/>
 
-            <h1>Question 3: Placeholder</h1>
+            <p>Question 3: Placeholder</p>
             <input type="range"  min="0" max="10" value = <?=$q3?> disabled/>
 
 

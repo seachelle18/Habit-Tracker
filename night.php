@@ -82,7 +82,7 @@ if (isset($_POST['submit'])) {
                 <p class="goal-response-text"><?php echo $goal; ?></p>
                 <div class="response-check">
                     <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . $j;?>> <?php $j++; ?>
-                    <input type="text" class="goal-text" name=<?php echo 'reflection' . $k;?>> <?php $k++; ?>
+                    <input type="text" class="goal-text" placeholder="Write a few words to reflect" name=<?php echo 'reflection' . $k;?>> <?php $k++; ?>
                 </div>
             </div>
         <?php endforeach; ?>
