@@ -1,16 +1,45 @@
+<?php
+session_start();
+$uname = $_SESSION['username'];
+?>
+
 <?php include "./header.php";
 
 //Configure PDO
-$pdo = new PDO ('sqlite:goal (2).db');
+$pdo = new PDO ('sqlite:goals.db');
 $retrievedEntry = []; 
 
 if (isset($_POST['submit'])) {
     $date = $_POST['journalDate'];
-    $sql = 'SELECT * FROM goals WHERE date = ?';
+    $sql = 'SELECT * FROM goal WHERE date ="' . $date . '" and userid = ' . $uname;
     $statement = $pdo->prepare($sql);
-    $statement->execute($date);
+    $statement->execute();
     $retrievedEntry = $statement->fetchAll();
 }
+
+$q1;
+$q2;
+$q3;
+echo $uname;
+echo $date;
+echo count($retrievedEntry);
+
+var_dump($retrievedEntry);
+
+// Values for questions 1-10
+if (count($retrievedEntry)>=1) {
+    $q1 = $retrievedEntry[0]['question0'];
+    $q2 = $retrievedEntry[0]['question1'];
+    $q3 = $retrievedEntry[0]['question2'];
+}
+
+
+
+
+
+
+
+
 ?>
 
 <body>
@@ -24,6 +53,7 @@ if (isset($_POST['submit'])) {
     <?php if (count($retrievedEntry) == 1): ?>
         <div class="block">
             <!-- display some stuff -->
+            <input type="range" disabled min="0" max="10" value = $q1/>
         </div>
     <?php endif ?>
 

@@ -4,7 +4,28 @@ $uname = $_POST['username'];
 $pword = $_POST['password'];
 $_SESSION['username'] = $uname;
 
+
+date_default_timezone_set("America/Edmonton");
+
 ?>
+
+
+<?php 
+
+function dateSwitch(){
+    $hour = date("H");
+    if ($hour >= 7 && $hour <= 14) {
+        header('Location:day.php');
+    }
+    else {
+        header('Location:night.php');
+    }
+}
+
+?>
+
+
+
 
 <?php
 
@@ -20,7 +41,8 @@ $_SESSION['username'] = $uname;
 
     foreach($allAccounts as $Account) {
         if ($Account["userid"] == $uname && $Account["password"] == $pword) { // FIX LATER, INSERT DYNAMIC VARIABLE IN PLACE OF ""
-            header('Location:day.php');
+            //header('Location:day.php');
+            dateSwitch();
             break;
         }
     }
@@ -33,6 +55,8 @@ $_SESSION['username'] = $uname;
     <body>
         <h1>
             Sorry your password was wrong! 
+            <?php echo date("F j, Y, g:i a");?> <br>
+            <?php echo date("H");?>
         </h1>
         <a href="index.php">Back to index!</a>
     </body>
