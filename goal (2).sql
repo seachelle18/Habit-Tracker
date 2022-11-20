@@ -30,22 +30,22 @@ SET time_zone = "+00:00";
 CREATE TABLE `goal` (
   `userid` int(10) NOT NULL,
   `date` date NOT NULL,
-  `feelrate` int(10) NOT NULL,
-  `energyrate` int(10) NOT NULL,
-  `questionrate` int(10) NOT NULL,
+  `question0` int(10) NOT NULL,
+  `question1` int(10) NOT NULL,
+  `question2` int(10) NOT NULL,
+  `goal0` varchar(200) NOT NULL,
+  `checkbox0` tinyint(1) NOT NULL,
   `goal1` varchar(200) NOT NULL,
-  `goalcomplete1` tinyint(1) NOT NULL,
+  `checkbox1` tinyint(1) NOT NULL,
   `goal2` varchar(200) NOT NULL,
-  `goalcomplete2` tinyint(1) NOT NULL,
-  `goal3` varchar(200) NOT NULL,
-  `goalcomplete3` tinyint(1) NOT NULL
+  `checkbox2` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `goal`
 --
 
-INSERT INTO `goal` (`userid`, `date`, `feelrate`, `energyrate`, `questionrate`, `goal1`, `goalcomplete1`, `goal2`, `goalcomplete2`, `goal3`, `goalcomplete3`) VALUES
+INSERT INTO `goal` (`userid`, `date`, `question0`, `question1`, `question2`, `goal0`, `checkbox0`, `goal1`, `checkbox1`, `goal2`, `checkbox2`) VALUES
 (1234, '2022-11-16', 1, 1, 1, '11', 1, '1', 1, '1', 1),
 (3012, '2022-11-02', 1, 1, 1, '1', 1, '1', 1, '1', 1),
 (1234, '2022-11-02', 11, 1, 1, '1', 1, '1', 1, '1', 1),
