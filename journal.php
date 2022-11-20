@@ -6,20 +6,25 @@ $uname = $_SESSION['username'];
 <?php include "./header.php";
 
 //Configure PDO
-$pdo = new PDO ('sqlite:goal (2).db');
+$pdo = new PDO ('sqlite:goals.db');
 $retrievedEntry = []; 
 
 if (isset($_POST['submit'])) {
     $date = $_POST['journalDate'];
-    $sql = 'SELECT * FROM goals WHERE date = ? and userid = ' . $uname;
+    $sql = 'SELECT * FROM goal WHERE date ="' . $date . '" and userid = ' . $uname;
     $statement = $pdo->prepare($sql);
-    $statement->execute($date);
+    $statement->execute();
     $retrievedEntry = $statement->fetchAll();
 }
 
 $q1;
 $q2;
 $q3;
+echo $uname;
+echo $date;
+echo count($retrievedEntry);
+
+var_dump($retrievedEntry);
 
 // Values for questions 1-10
 if (count($retrievedEntry)>=1) {
