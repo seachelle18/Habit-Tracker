@@ -4,7 +4,8 @@ include "./questionbank.php";
 
 session_start();
 $username = $_SESSION['username'];
-$chosenDate = date('Y-m-d');
+$date = date('Y-m-d');
+$count = [0,1,2];
 
 $question0 = $question1 = $question2 = 0;
 $reflection0 = $reflection1 = $reflection2 = '';
@@ -14,7 +15,7 @@ $journal = '';
     $pdo = new PDO ('sqlite:goals.db');
     $sql_pull = 'SELECT goal0, goal1, goal2 FROM goal WHERE userid = ? AND date = ?;';
     $stmt_pull = $pdo->prepare($sql_pull);
-    $stmt_pull->execute([$username, $chosenDate]);
+    $stmt_pull->execute([$username, $date]);
     $goalResponses = $stmt_pull->fetchAll(PDO::FETCH_ASSOC);
     var_dump($goalResponses);
 
@@ -63,8 +64,8 @@ if (isset($_POST['submit'])) {
             <div class="response-container">
                 <p class="goal-response-text"><?php echo $goal; ?></p>
                 <div class="response-check">
-                <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses[0])?>>
-                    <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses[0])?>>
+                <input type="checkbox" class="goal-checkbox" name=<?php echo 'checkbox' . array_search($goal, $goalResponses[0]);?>>
+                <input type="text" class="goal-text" name=<?php echo 'reflection' . array_search($goal, $goalResponses[0]);?>>
                 </div>
             </div>
         <?php endforeach; ?>
@@ -72,6 +73,7 @@ if (isset($_POST['submit'])) {
         <input type="textarea" class="journal-entry" name="journal">
         <input type="submit" name="submit" value="Submit" class="form-button">
         <input type="reset" name="reset" value="Reset" class="form-button">
+        </form>
         </div>
         <?php var_dump($reflection0); var_dump($reflection1); var_dump($reflection2);
         var_dump($question0); var_dump($question1); var_dump($question2); 
