@@ -27,7 +27,7 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
         <?php endforeach; ?>
         <label for="journal" class="form-label">Journal entry for today:</label>
         <input type="textarea" class="journal-entry" name="journal">
-        <input type="submit" value="Submit" class="form-button">
-        <input type="reset" value="Reset" class="form-button">
+        <input type="submit" name="submit" value="Submit" class="form-button">
+        <input type="reset" name="reset" value="Reset" class="form-button">
         </div>
 </body>
