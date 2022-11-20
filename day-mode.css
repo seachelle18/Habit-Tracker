@@ -153,7 +153,7 @@ input[type="range"]::-webkit-slider-thumb {
 .quote {
     font-family: monospace;
     font-size: 40px;
-    padding: 40px;
+    padding: 60px;
     margin: 40px 40px;
     text-align: center;
 }
