@@ -12,6 +12,9 @@ body {
     -webkit-background-size: 20vw, cover;
     -o-background-size: 20vw, cover;
     background-size: 20vw, cover;
+    -webkit-transition: 1000ms linear, none;
+    -ms-transition: 1000ms linear, none;
+    transition: 1000ms linear, none;
 }
 
 /* .navbar::before {
@@ -27,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     height: 50px;
-    border-bottom: 2px solid #f0c420;
+    /* border-bottom: 2px solid #f0c420; */
 }
 
 .navbar ul {
@@ -48,8 +51,7 @@ body {
 }
 
 .date {
-    padding-top: 10px;
-    margin-right: 20px;
+    margin: auto;
     font-family: monospace, sans-serif;
     color: white;
 }

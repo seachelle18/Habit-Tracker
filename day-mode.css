@@ -37,10 +37,11 @@ body {
 
 
 .navbar {
+    display: block;
     margin: 0;
     padding: 0;
     height: 50px;
-    border-bottom: 2px solid lightblue;
+    border-bottom: 2px solid transparent;
 }
 
 .navbar ul {
@@ -61,7 +62,6 @@ body {
 }
 
 .date {
-    padding-top: 10px;
     margin-right: 20px;
     font-family: monospace, sans-serif;
     color: grey;
@@ -101,6 +101,10 @@ form * {
 
 .goal {
     padding-bottom: 10px;
+}
+
+.goal-question {
+    text-align: center;
 }
 
 input[type="submit"], input[type="reset"] {
@@ -149,7 +153,7 @@ input[type="range"]::-webkit-slider-thumb {
 .quote {
     font-family: monospace;
     font-size: 40px;
-    padding: 40px;
+    padding: 60px;
     margin: 40px 40px;
     text-align: center;
 }
@@ -161,3 +165,23 @@ input[type="range"]::-webkit-slider-thumb {
 .night-entry {
     border-radius: 15px;
 }
+
+.response-container {
+    margin: 0 7%;
+    text-align: center;
+}
+
+.response-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.response-check input[type="text"], input[type="checkbox"]{
+    margin: auto 0;
+}
+
+input[type="text"] {
+    width: 70%;
+}
+
