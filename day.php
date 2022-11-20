@@ -10,7 +10,7 @@ $question0 = $question1 = $question2 = 5;
 $goal0 = $goal1 = $goal2 = '';
 
 //Configure PDO
-$pdo = new PDO ('sqlite:C:/Users/michellec/xampp/htdocs/habit-tracker/Habit-Tracker/goal (2).db');
+$pdo = new PDO ('sqlite:./goal (2).db');
 
 
 if (isset($_POST['submit'])) {
