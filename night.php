@@ -2,6 +2,11 @@
 include "./header.php";
 include "./questionbank.php";
 
+session_start();
+$username = $_SESSION['username'];
+$_SESSION['username'] = $username;
+
+
 $question0 = $question1 = $question2 = 0;
 $reflection0 = $reflection1 = $reflection2 = '';
 $checkbox0 = $checkbox1 = $checkbox2 = 0;
