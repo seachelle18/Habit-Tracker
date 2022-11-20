@@ -93,6 +93,7 @@ if (count($retrievedEntry)>=1) {
     <?php if (count($retrievedEntry) >= 1): ?>
         <div class="block day-results">
             <!-- display some stuff -->
+<<<<<<< HEAD
             <p>Question 1: Placeholder</p>
             <input type="range"  min="0" max="10" value = <?=$q1?> disabled/>
 
@@ -100,6 +101,15 @@ if (count($retrievedEntry)>=1) {
             <input type="range"  min="0" max="10" value = <?=$q2?> disabled/>
 
             <p>Question 3: Placeholder</p>
+=======
+            <h1>Question 1: How are you feeling right now?</h1>
+            <input type="range"  min="0" max="10" value = <?=$q1?> disabled/>
+
+            <h1>Question 2: How much energy do you have today?</h1>
+            <input type="range"  min="0" max="10" value = <?=$q2?> disabled/>
+
+            <h1>Question 3: How are your stress levels right now?</h1>
+>>>>>>> 6b568c61aeb430f045d83e92b1f978eeb5fa3e5e
             <input type="range"  min="0" max="10" value = <?=$q3?> disabled/>
 
 
