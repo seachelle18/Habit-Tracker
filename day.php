@@ -30,8 +30,9 @@ if (isset($_POST['submit'])) {
 
 ?>
 <body>
-<!-- <div class="moving">
-</div> -->
+<div class="moving">
+    <a></a>
+</div>
 
 <div class="block quote">
     <?php echo '"' . $quote . '"'; ?>
