@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
     </div>
     <?php if (count($retrievedEntry) == 1): ?>
         <div class="block">
-            <!-- some stuff -->
+            <!-- display some stuff -->
         </div>
     <?php endif ?>
 

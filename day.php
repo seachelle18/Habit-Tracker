@@ -1,16 +1,15 @@
 <?php 
 session_start();
-// $username = $_SESSION['username'];
-$username = "maggie";
+$username = $_SESSION['username'];
+
 
 include "./header.php";
 include "./questionbank.php";
-require "./goal (2).db";
 $question0 = $question1 = $question2 = 5;
 $goal0 = $goal1 = $goal2 = '';
 
 //Configure PDO
-$pdo = new PDO ('sqlite:./goal (2).db');
+$pdo = new PDO ('sqlite:HackTheChange.db');
 
 
 if (isset($_POST['submit'])) {
@@ -57,5 +56,5 @@ if (isset($_POST['submit'])) {
         <input type="reset" name="reset" value="Reset" class="form-button">
     </form>
 </div>
-<?php var_dump($question0); var_dump($question1); var_dump($question2); var_dump($goal0); var_dump($goal1); var_dump($goal2); ?>
+<!-- <?php var_dump($question0); var_dump($question1); var_dump($question2); var_dump($goal0); var_dump($goal1); var_dump($goal2); ?> -->
 </body>
