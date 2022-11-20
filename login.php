@@ -12,7 +12,7 @@ $_SESSION['username'] = $uname;
 
 <?php
 
-    $PATH_TO_SQLITE_FILE = "C:\Users\michellec\xampp\htdocs\habit-tracker\Habit-Tracker\login (2).sql"; // PUT IN PROPER PATH AFTERWARDS
+    $PATH_TO_SQLITE_FILE = "C:\Users\michellec\xampp\htdocs\habit-tracker\Habit-Tracker\login (2).db"; // PUT IN PROPER PATH AFTERWARDS
 
     $pdo = new PDO("sqlite:" . $PATH_TO_SQLITE_FILE);
     $sql = "
