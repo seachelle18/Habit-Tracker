@@ -197,3 +197,8 @@ textarea {
     background-color: white;
     border-radius: 10px;;
 }
+
+.goal-reflect {
+    font-family: sans-serif;
+    color: grey;
+}
