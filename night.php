@@ -1,5 +1,5 @@
 <?php 
-include "./header.html";
+include "./header.php";
 include "./questionbank.php";
 
 $reflection0 = $reflection1 = $reflection2 = '';
