@@ -1,7 +1,9 @@
 body {
-    background-image: url("Untitled-design.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url("pictures/night-sky.png") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .navbar {
