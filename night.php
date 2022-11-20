@@ -21,6 +21,8 @@ if (isset($_POST['submit'])) {
         $checkbox1 = 1; }
     if ($_POST['checkbox2'] === "on") {
         $checkbox2 = 1; }
+    
+    $journal = $_POST['journal'];
 }
 
 //get stuff from SQL database
@@ -53,6 +55,7 @@ $goalResponses = ["placeholder1", "placeholder2", "placeholder3"];
         </div>
         <?php var_dump($reflection0); var_dump($reflection1); var_dump($reflection2);
         var_dump($question0); var_dump($question1); var_dump($question2); 
-        var_dump($checkbox0); var_dump($checkbox1); var_dump($checkbox2);  
+        var_dump($checkbox0); var_dump($checkbox1); var_dump($checkbox2);
+        var_dump($journal);  
         ?>
 </body>
