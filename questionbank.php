@@ -1,6 +1,6 @@
 <?php
 $quote = get_quote();
-$questionBank = ["How are you feeling right now?", "How much energy do you have today?", "What is this question?"];
+$questionBank = ["How are you feeling right now?", "How much energy do you have today?", "How are your stress levels right now?"];
 
 ?>
 
